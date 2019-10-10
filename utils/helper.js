@@ -18,19 +18,15 @@ const isAuthorizedPromise = (userList, user) => {
         
         return new Promise((res) => {
             const p = new Promise((resolve) => {
-
-                setTimeout(() => { resolve(userList.indexOf(user) >= 0); }, 10);
-                
-            })
-            
+                setTimeout(() => { resolve(userList.indexOf(user) >= 0); }, 10);                
+            })            
     
             p.then((value) => {
                 res(value)
             })
         })
         
-    }
- 
+    } 
     
     return new Promise((resolve) => {
         resolve(checkForUserAfterTimeout());
